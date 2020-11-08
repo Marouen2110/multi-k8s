@@ -1,0 +1,20 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: k8s-multi-com-tls
+spec:
+  secretName: k8s-multi-com
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: worth-it-api.xyz 
+  dnsNames:
+    - worth-it-api.xyz 
+    - www.worth-it-api.xyz 
+  acme:
+    config:
+      - http01:
+          ingressClass: nginx
+        domains:
+          - worth-it-api.xyz 
+          - www.worth-it-api.xyz 
