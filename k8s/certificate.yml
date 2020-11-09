@@ -1,9 +1,9 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: k8s-multi-com-tls
+  name: worth-it-api-xyz-tls
 spec:
-  secretName: k8s-multi-com
+  secretName: worth-it-api-xyz
   issuerRef:
     name: letsencrypt-prod
     kind: ClusterIssuer

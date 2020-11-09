@@ -13,7 +13,7 @@ spec:
     - hosts:
         - worth-it-api.xyz 
         - www.worth-it-api.xyz 
-      secretName: k8s-multi-com
+      secretName: worth-it-api-xyz
   rules:
     - host: worth-it-api.xyz
       http:
